@@ -12,20 +12,20 @@ const Header = () => {
           style={{ fontFamily: "regular" }}
           className="flex gap-10 items-center text-[#898989] text-2xl cursor-pointer"
         >
-          <li className="transition-all duration-300 ease-in-out transform hover:scale-105 hover:text-[#6E58F1]">
+          <li className="relative transition-all duration-300 ease-out  after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#6E58F1] after:transition-all after:duration-300 after:ease-out hover:after:w-full hover:after:-translate-x-1/2 after:transform">
             Product
           </li>
 
-          <li className="transition-all duration-300 ease-in-out transform hover:scale-105 hover:text-[#6E58F1]">
+          <li className="relative transition-all duration-300 ease-out  after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#6E58F1] after:transition-all after:duration-300 after:ease-out hover:after:w-full hover:after:-translate-x-1/2 after:transform">
             Features
           </li>
-          <li className="transition-all duration-300 ease-in-out transform hover:scale-105 hover:text-[#6E58F1]">
+          <li className="relative transition-all duration-300 ease-out  after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#6E58F1] after:transition-all after:duration-300 after:ease-out hover:after:w-full hover:after:-translate-x-1/2 after:transform">
             Solutions
           </li>
         </ul>
       </div>
       <div>
-        <Plainbtn text={'Get Started Now'}/>
+        <Plainbtn text={"Get Started Now"} />
       </div>
     </div>
   );

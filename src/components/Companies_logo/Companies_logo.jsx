@@ -2,7 +2,7 @@ import React from "react";
 
 const Companies_logo = () => {
   return (
-    <div className="w-[1620px] h-[440px] rounded-[50px] bg-gradient-to-r from-[#6E58F11A] via-[#FAF9F6] to-[#6E58F11A] m-auto flex flex-col items-center justify-center">
+    <div className="w-[1620px] h-[440px] rounded-[50px] bg-gradient-to-r from-[#6E58F11A] via-[#FAF9F6] to-[#6E58F11A] m-auto flex flex-col items-center justify-center mt-20">
       <div className="w-[1073px]">
         <h1
           style={{ fontFamily: "bold" }}

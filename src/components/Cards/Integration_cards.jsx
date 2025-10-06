@@ -20,8 +20,8 @@ const Integration_cards = () => {
           Favorite Tools
         </h1>
       </div>
-      <div className="border-2 border-dashed border-[#6E58F1] w-[800px] flex flex-col items-center justify-center gap-8">
-        <div className="flex gap-5">
+      <div className="border-2 border-dashed border-[#6E58F1] w-[800px] flex flex-col items-center justify-center gap-12 p-10 rounded-2xl">
+        <div className="flex gap-8">
           <img src="/images/slack 1.svg" alt="" className="w-[50px] h-[50px]" />
           <img
             src="/images/image-Photoroom (2) 1.svg"
@@ -39,7 +39,7 @@ const Integration_cards = () => {
             className="w-[220px] h-[50px]"
           />
         </div>
-        <div className="flex gap-5">
+        <div className="flex gap-8">
           <img
             src="/images/sheets 1.svg"
             alt=""

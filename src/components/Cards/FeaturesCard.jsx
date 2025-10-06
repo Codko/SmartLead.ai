@@ -15,7 +15,11 @@ const FeaturesCard = () => {
             Let SmartAgents do the hard work, so your team can focus on the deal
             work
           </p>
-          <Plainbtn iswhite={true} text={'Start a 14-day Free Trial'} w={'351'}/>
+          <Plainbtn
+            iswhite={true}
+            text={"Start a 14-day Free Trial"}
+            w={"351"}
+          />
         </div>
       </div>
       <div className="w-[663px] h-[500px] rounded-[50px] bg-gradient-to-tl from-[#6E58F11A] to-[#FAF9F6] self-end relative flex flex-col items-center justify-center gap-10 overflow-hidden">

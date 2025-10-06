@@ -8,9 +8,9 @@ const Content = () => {
   return (
     <div className="w-[1073px] h-[670px]  mt-36 m-auto flex flex-col items-center">
       <div className="flex flex-col items-center">
-        <Fillbtn text={'Smart Agent'}/>
+        <Fillbtn text={"Smart Agent"} />
       </div>
-      <div className="pt-12 w-3xl">
+      <div className="pt-6 w-3xl">
         <h1
           style={{ fontFamily: "bold" }}
           className="text-6xl text-center leading-20 text-[#0a0a0a]"
@@ -26,9 +26,9 @@ const Content = () => {
         and outreach to follow-ups, analytics, and closing deals.
       </p>
       <div
-        className={`w-full h-[95px] mt-10 shadow-[#FAF9F6]  shadow-2xl ${
+        className={`w-full h-[95px] mt-10   shadow-lg ${
           text ? "border border-[#6E58F1]" : "border border-[#FAF9F6]"
-        } rounded-[50px] flex items-center `}
+        } rounded-[50px] flex items-center  shadow-[#9381fc]`}
       >
         <input
           style={{ fontFamily: "regular" }}
@@ -39,7 +39,7 @@ const Content = () => {
           type="text"
         />
         <div className="pr-4">
-          <Plainbtn text={'Create An Agent'}/>
+          <Plainbtn text={"Create An Agent"} />
         </div>
       </div>
       <div className="flex  w-full justify-center gap-6 pt-10">
