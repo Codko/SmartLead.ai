@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "regular";
+  src: url("/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "medium";
+  src: url("/fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "semi-bold";
+  src: url("/fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: "bold";
+  src: url("/fonts/Poppins-Bold.ttf");
+}
+.btn-fill {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.btn-fill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #6e58f1;
+  z-index: -1;
+  transition: width 0.4s ease-in-out;
+  border-radius: 50px;
+}
+
+.btn-fill:hover::before {
+  width: 100%;
+}
