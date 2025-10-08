@@ -37,7 +37,7 @@ const Companies_logo = () => {
       bg-gradient-to-r from-[#6E58F11A] via-[#FAF9F6] to-[#6E58F11A] 
       mx-auto flex flex-col items-center justify-center 
       mt-16 md:mt-20 px-4 py-10 sm:py-16 
-      overflow-hidden relative"
+      overflow-x-hidden relative"
     >
       <div className="w-full max-w-[1073px] text-center">
         <h1

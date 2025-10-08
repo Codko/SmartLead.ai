@@ -92,7 +92,7 @@ const Content = () => {
 
         <div
           className={`w-full mt-10 shadow-lg ${
-            text ? "border" : "border border-[#FAF9F6]"
+            text ? "border border-[#9381fc]" : "border border-[#FAF9F6]"
           } rounded-[50px] flex flex-col sm:flex-row items-stretch sm:items-center shadow-[#9381fc] overflow-hidden`}
         >
           <input

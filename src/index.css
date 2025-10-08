@@ -16,6 +16,9 @@
   font-family: "bold";
   src: url("/fonts/Poppins-Bold.ttf");
 }
+html, body {
+  overflow-x: hidden;
+}
 .btn-fill {
   position: relative;
   overflow: hidden;
