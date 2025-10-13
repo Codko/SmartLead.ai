@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "regular";
+  src: url("/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "medium";
+  src: url("/fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "semi-bold";
+  src: url("/fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: "bold";
+  src: url("/fonts/Poppins-Bold.ttf");
+}
