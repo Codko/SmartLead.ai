@@ -10,7 +10,7 @@ const Primarybtn = ({ text, w, bg }) => {
         color: bg ? "#6E58F1" : "#fff",
         width: w ? `${w}px` : undefined,
       }}
-      className={`h-12 flex items-center justify-center gap-2 rounded-2xl 
+      className={`h-12 lg:w-40 flex items-center justify-center gap-2 rounded-2xl 
         text-[10px] md:w-24 md:h-10 md:text-xs lg:text-lg 
         outline-none transition-all transform duration-200 ease-in-out hover:scale-105
         ${bg ? "border" : "border-none"}
