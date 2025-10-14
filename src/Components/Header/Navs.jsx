@@ -27,7 +27,7 @@ const Navs = () => {
     });
 
     tl.to(navLeftRef.current, {
-      x: "+=450",
+      x: "+=480",
       scale: 0.95,
       borderTopRightRadius: "0px",
       borderBottomRightRadius: "0px",
@@ -35,7 +35,7 @@ const Navs = () => {
     }).to(
       navRightRef.current,
       {
-        x: "-=481",
+        x: "-=480",
         scale: 0.95,
         borderTopLeftRadius: "0px",
         borderBottomLeftRadius: "0px",
