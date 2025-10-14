@@ -35,7 +35,7 @@ const Navs = () => {
     }).to(
       navRightRef.current,
       {
-        x: "-=510",
+        x: "-=520",
         scale: 0.95,
         borderTopLeftRadius: "0px",
         borderBottomLeftRadius: "0px",
