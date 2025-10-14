@@ -17,17 +17,6 @@ const Navs = () => {
     const leftEl = navLeftRef.current;
     const rightEl = navRightRef.current;
 
-    // get bounding boxes
-    const leftRect = leftEl.getBoundingClientRect();
-    const rightRect = rightEl.getBoundingClientRect();
-
-    const centerX = window.innerWidth / 2;
-
-    // compute how far leftEl must move so its right edge hits center
-    const leftTargetX = centerX - (leftRect.left + leftRect.width / 3);
-    // compute how far rightEl must move so its left edge hits center
-    const rightTargetX = centerX - (rightRect.left + rightRect.width / 2);
-
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: leftEl,
@@ -38,7 +27,7 @@ const Navs = () => {
     });
 
     tl.to(navLeftRef.current, {
-      x: "+=450", 
+      x: "+=450",
       scale: 0.95,
       borderTopRightRadius: "0px",
       borderBottomRightRadius: "0px",
@@ -46,7 +35,7 @@ const Navs = () => {
     }).to(
       navRightRef.current,
       {
-        x: "-=485", 
+        x: "-=481",
         scale: 0.95,
         borderTopLeftRadius: "0px",
         borderBottomLeftRadius: "0px",
@@ -66,7 +55,7 @@ const Navs = () => {
     tl.to(
       rightEl,
       {
-        x: "-=2", // 2 px overlap
+        x: "-=2", 
         ease: "power1.inOut",
       },
       "-=0.2"
@@ -83,7 +72,7 @@ const Navs = () => {
       <div
         ref={navLeftRef}
         className="
-  rounded-2xl 
+  rounded-l-2xl 
   flex items-center justify-center
   w-[200px] h-12 
   sm:w-[400px] sm:h-16 sm:justify-around sm:bg-white
@@ -123,7 +112,7 @@ const Navs = () => {
         ref={navRightRef}
         className="
           hidden
-          rounded-2xl
+          rounded-r-2xl
           md:flex md:items-center md:justify-center md:gap-4          
           md:w-[180px] sm:h-16 md:h-16
           lg:h-16 lg:w-[250px]
