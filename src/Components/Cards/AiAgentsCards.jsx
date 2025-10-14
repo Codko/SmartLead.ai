@@ -1,16 +1,19 @@
-import Aos from "aos";
 import React, { useEffect, useRef } from "react";
 import { CiUser, CiClock2 } from "react-icons/ci";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 const AiAgentsCards = () => {
   const containerRef = useRef(null);
   const cardRefs = useRef([]);
+
   useEffect(() => {
     if (window.innerWidth < 1024) return;
+
     const ctx = gsap.context(() => {
       const cards = cardRefs.current;
+
       gsap.set(cards[0], {
         rotate: 45,
         x: 200,
@@ -38,9 +41,10 @@ const AiAgentsCards = () => {
         y: 0,
         scale: 1,
         duration: 2,
-        stagger: 0.4,
+        stagger: 0.2,
       });
     }, containerRef);
+
     return () => ctx.revert();
   }, []);
   const cards = [
