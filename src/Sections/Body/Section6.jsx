@@ -4,7 +4,7 @@ import PAWcards from "../../Components/Cards/PAWcards";
 const Section6 = () => {
   return (
     <div className="w-full min-h-screen flex flex-col items-center">
-    <PAWcards/>
+      <PAWcards />
     </div>
   );
 };

@@ -23,7 +23,7 @@ const Bar = () => {
       <div className="text-center lg:text-left">
         <h1
           style={{ fontFamily: "bold" }}
-          className="text-[15px] lg:text-3xl text-white lg:max-w-[480px]"
+          className="text-[14px] lg:text-3xl text-white lg:max-w-[480px]"
         >
           Let’s Build Your Intelligent Enterprise Outreach Engine
         </h1>
