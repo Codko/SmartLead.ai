@@ -34,17 +34,11 @@ const Hero = ({ footer }) => {
         />
       </svg>
 
-      <div className="flex justify-center sm:flex sm:justify-center md:flex md:justify-between md:gap-10 lg:flex lg:justify-between lg:gap-6">
-        <div>
-          <Navs scrollTo={footer} />
-        </div>
-
-        <div className="lg:pr-16 md:pr-10 sm:pr-8">
-          <CTA />
-        </div>
+      <div className="">
+        <Navs scrollTo={footer} />
       </div>
 
-      <div className="mt-20 lg:mt-70">
+      <div className="mt-30 lg:mt-70">
         <Content text={"Smart Lead"} />
       </div>
     </div>
