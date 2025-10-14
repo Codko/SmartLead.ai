@@ -1,7 +1,7 @@
 import React from "react";
 import Ai_Agents from "../../Components/Content/Ai-Agents";
 import AiAgentsCards from "../../Components/Cards/AiAgentsCards";
-import Bar from "../../Components/Cards/bar";
+import Bar from "../../Components/Cards/Bar";
 
 const Section4 = () => {
   return (
