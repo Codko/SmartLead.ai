@@ -11,19 +11,34 @@ const Navs = () => {
   const navLeftRef = useRef(null);
   const navRightRef = useRef(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     if (window.innerWidth < 1024) return;
+
+    const leftEl = navLeftRef.current;
+    const rightEl = navRightRef.current;
+
+    // get bounding boxes
+    const leftRect = leftEl.getBoundingClientRect();
+    const rightRect = rightEl.getBoundingClientRect();
+
+    const centerX = window.innerWidth / 2;
+
+    // compute how far leftEl must move so its right edge hits center
+    const leftTargetX = centerX - (leftRect.left + leftRect.width / 3);
+    // compute how far rightEl must move so its left edge hits center
+    const rightTargetX = centerX - (rightRect.left + rightRect.width / 2);
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: navLeftRef.current,
+        trigger: leftEl,
         start: "top+=100 top",
         end: "top+=400 top",
         scrub: true,
       },
     });
+
     tl.to(navLeftRef.current, {
-      xPercent: 75,
+      x: "+=450", 
       scale: 0.95,
       borderTopRightRadius: "0px",
       borderBottomRightRadius: "0px",
@@ -31,7 +46,7 @@ const Navs = () => {
     }).to(
       navRightRef.current,
       {
-        xPercent: -172,
+        x: "-=485", 
         scale: 0.95,
         borderTopLeftRadius: "0px",
         borderBottomLeftRadius: "0px",
@@ -41,25 +56,24 @@ const Navs = () => {
     );
 
     tl.to(
-      [navLeftRef.current, navRightRef.current],
+      [leftEl, rightEl],
       {
         backgroundColor: "#ffffff",
         ease: "power2.inOut",
       },
       "<"
     );
-
     tl.to(
-      navRightRef.current,
+      rightEl,
       {
-        x: "-=20",
+        x: "-=2", // 2 px overlap
         ease: "power1.inOut",
       },
       "-=0.2"
     );
 
     return () => {
-      tl.scrollTrigger && tl.scrollTrigger.kill();
+      tl.scrollTrigger?.kill();
       tl.kill();
     };
   }, []);
