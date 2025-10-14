@@ -11,58 +11,67 @@ const Navs = () => {
   const navLeftRef = useRef(null);
   const navRightRef = useRef(null);
 
-  useEffect(() => {
-    if (window.innerWidth < 1024) return;
+ useGSAP(() => {
+  if (window.innerWidth < 1024) return;
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: navLeftRef.current,
-        start: "top+=100 top",
-        end: "top+=400 top",
-        scrub: true,
-      },
-    });
-    tl.to(navLeftRef.current, {
-      xPercent: 75,
+  const leftEl = navLeftRef.current;
+  const rightEl = navRightRef.current;
+
+  const leftRect = leftEl.getBoundingClientRect();
+  const rightRect = rightEl.getBoundingClientRect();
+  const centerX = window.innerWidth / 2;
+  const leftTargetX = centerX - (leftRect.left + leftRect.width / 2);
+  const rightTargetX = centerX - (rightRect.left + rightRect.width / 2);
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: leftEl,
+      start: "top+=100 top",
+      end: "top+=400 top",
+      scrub: true,
+    },
+  });
+
+  tl.to(leftEl, {
+    x: leftTargetX,
+    scale: 0.95,
+    borderTopRightRadius: "0px",
+    borderBottomRightRadius: "0px",
+    ease: "power2.inOut",
+  }).to(
+    rightEl,
+    {
+      x: rightTargetX,
       scale: 0.95,
-      borderTopRightRadius: "0px",
-      borderBottomRightRadius: "0px",
+      borderTopLeftRadius: "0px",
+      borderBottomLeftRadius: "0px",
       ease: "power2.inOut",
-    }).to(
-      navRightRef.current,
-      {
-        xPercent: -172,
-        scale: 0.95,
-        borderTopLeftRadius: "0px",
-        borderBottomLeftRadius: "0px",
-        ease: "power2.inOut",
-      },
-      "<"
-    );
+    },
+    "<"
+  );
+  tl.to(
+    [leftEl, rightEl],
+    {
+      backgroundColor: "#ffffff",
+      boxShadow: "0 0 20px rgba(0,0,0,0.1)",
+      ease: "power2.inOut",
+    },
+    "<"
+  );
+  tl.to(
+    rightEl,
+    {
+      x: "-=2", // 2 px overlap
+      ease: "power1.inOut",
+    },
+    "-=0.2"
+  );
 
-    tl.to(
-      [navLeftRef.current, navRightRef.current],
-      {
-        backgroundColor: "#ffffff",
-        ease: "power2.inOut",
-      },
-      "<"
-    );
-
-    tl.to(
-      navRightRef.current,
-      {
-        x: "-=20",
-        ease: "power1.inOut",
-      },
-      "-=0.2"
-    );
-
-    return () => {
-      tl.scrollTrigger && tl.scrollTrigger.kill();
-      tl.kill();
-    };
-  }, []);
+  return () => {
+    tl.scrollTrigger?.kill();
+    tl.kill();
+  };
+}, []);
 
   return (
     <div className="flex justify-center md:justify-between items-center w-full">
