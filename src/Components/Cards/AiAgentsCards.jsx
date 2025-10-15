@@ -55,7 +55,7 @@ const AiAgentsCards = () => {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col items-center justify-center gap-6 px-4 py-10 md:flex-row md:flex-wrap lg:gap-4 lg:px-[26px]"
+      className="flex flex-col items-center justify-center gap-6 px-4 py-10 md:flex-row md:flex-wrap lg:gap-4"
     >
       {cards.map((card, index) => (
         <div
