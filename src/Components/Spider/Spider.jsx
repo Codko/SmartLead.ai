@@ -99,7 +99,7 @@ const Spider = () => {
         ref={logoRef}
         src="/images/central_logo.svg"
         alt="central logo"
-        className="w-[70px] sm:w-[90px] lg:w-[100px] object-contain z-10"
+        className="w-[70px] sm:w-[90px] lg:w-[160px] object-contain z-10"
       />
 
       {/* Lines */}
@@ -117,7 +117,7 @@ const Spider = () => {
             x2={x2}
             y2={y2}
             stroke="#6E58F1"
-            strokeWidth="2"
+            strokeWidth="1"
             strokeDasharray="10 6"
             strokeLinecap="round"
           />
@@ -130,16 +130,15 @@ const Spider = () => {
         const dx = x - cx;
         const dy = y - cy;
 
-       
         const gap =
-          window.innerWidth < 640 ? 55 : window.innerWidth < 1024 ? 70 : 40;
+          window.innerWidth < 640 ? 55 : window.innerWidth < 1024 ? 70 : 64;
 
         const length = Math.hypot(dx, dy);
         const tipX = x + (dx / length) * gap;
         const tipY = y + (dy / length) * gap;
 
         const posX = (tipX / 500) * 100;
-        const posY = (tipY / 530) * 100;
+        const posY = (tipY / 532) * 100;
 
         return (
           <img

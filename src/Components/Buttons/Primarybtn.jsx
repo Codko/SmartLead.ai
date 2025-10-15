@@ -9,10 +9,10 @@ const Primarybtn = ({ text, w, bg }) => {
         fontFamily: "regular",
         backgroundColor: bg || "#6E58F1",
         color: bg ? "#6E58F1" : "#fff",
-        width: !isMobile && w ? `${w}px` : "",
+        width: !isMobile ? `${w}px` : "104px",
       }}
-      className={`h-12 w-26 lg:w-40 flex items-center justify-center gap-2 rounded-2xl 
-        text-[10px] md:w-24 md:h-10 md:text-xs lg:text-lg 
+      className={`h-12 w-26 p-2 lg:w-40 flex items-center justify-center gap-2 rounded-2xl 
+        text-[10px] md:w-24 md:h-10 md:text-xs lg:text-[15px] 
         outline-none transition-all transform duration-200 ease-in-out hover:scale-105
         ${bg ? "border" : "border-none"}
       `}

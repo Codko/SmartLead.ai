@@ -55,7 +55,7 @@ const AiAgentsCards = () => {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col items-center justify-center gap-6 px-4 py-10 md:flex-row md:flex-wrap lg:gap-10"
+      className="flex flex-col items-center justify-center gap-6 px-4 py-10 md:flex-row md:flex-wrap lg:gap-4 lg:px-[26px]"
     >
       {cards.map((card, index) => (
         <div
@@ -63,7 +63,7 @@ const AiAgentsCards = () => {
           ref={(el) => (cardRefs.current[index] = el)}
           data-aos="fade-up"
           className="
-            w-full sm:w-[90%] md:w-[400px] lg:w-[530px] 
+            w-full sm:w-[90%] md:w-[400px] lg:w-[500px] 
             bg-white rounded-[10px] shadow-md transition-all
             hover:shadow-lg"
         >

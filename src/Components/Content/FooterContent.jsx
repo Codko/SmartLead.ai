@@ -56,15 +56,15 @@ const FooterContent = () => {
       ref={footerRef}
       className="w-full shadow-[#898989] shadow-2xl bg-white"
     >
-      <div className="footer-top flex flex-col lg:flex-row items-center justify-between px-4 md:px-8 lg:px-16 pt-10 lg:pt-20">
+      <div className="footer-top flex flex-col lg:flex-row items-center justify-around px-4 md:px-8 lg:px-[26px] pt-10 lg:pt-20">
         <div className="mb-8 lg:mb-0">
           <img src="/images/Vector.svg" alt="" className="mx-auto lg:mx-0" />
         </div>
 
-        <div className="w-full lg:w-2/5 px-4 mb-8 lg:mb-0">
+        <div className="w-full lg:w-[439px] px-4 mb-8 lg:mb-0">
           <p
             style={{ fontFamily: "regular" }}
-            className="text-base md:text-lg text-[#898989] text-center lg:text-left"
+            className="text-base md:text-[15px] text-[#898989] text-center lg:text-left"
           >
             AI-native Outbound OS built for SDRs, agencies, and GTM teams who
             want to scale with intelligence.
@@ -82,13 +82,13 @@ const FooterContent = () => {
           ))}
         </div>
 
-        <div className="flex items-center gap-4 sm:gap-8">
-          <img src="/images/Badges.png" alt="" className="h-10 sm:h-12" />
-          <img src="/images/Badges (1).png" alt="" className="h-10 sm:h-12" />
+        <div className="flex items-center sm:gap-8">
+          <img src="/images/Badges.svg" alt="" className="h-10 sm:h-12" />
+          <img src="/images/Group.svg" alt="" className="h-10 sm:h-12" />
         </div>
       </div>
 
-      <div className="footer-grid px-4 md:px-8 lg:px-16 mt-16 lg:mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+      <div className="footer-grid  px-4 md:px-8 lg:px-[26px] mt-16 lg:mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mx-[70px]">
         {[
           {
             title: "Product",
@@ -170,8 +170,8 @@ const FooterContent = () => {
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-between">
-        <div className="px-4 md:px-8 lg:px-16 mt-16 lg:mt-20 flex flex-col gap-6 lg:gap-12  ">
+      <div className="flex items-center justify-between px-4 md:px-8 lg:px-[26px] lg:mx-[70px]">
+        <div className="mt-16 lg:mt-20 flex flex-col gap-6 lg:gap-8">
           <h1
             style={{ fontFamily: "medium" }}
             className="text-2xl sm:text-3xl text-[#0A0A0A]"
@@ -201,7 +201,7 @@ const FooterContent = () => {
           </div>
         </div>
         <div className="mt-20 mr-10">
-          <img src="/images/image 12.png" alt="" />
+          <img src="/images/image 12.svg" alt="" className="xl:w-[250px]"/>
         </div>
       </div>
 

@@ -30,6 +30,7 @@ const TestCards = () => {
           gap-6 
           w-full 
           max-w-[1400px]
+          2xl:gap-x-28
         "
       >
         {cards.map((animation, i) => (
@@ -40,7 +41,8 @@ const TestCards = () => {
               w-full 
               sm:w-[90%] 
               lg:w-[380px] 
-              xl:w-[420px]
+              2xl:w-[500px]
+              2xl:h-[450px]
               h-auto 
               rounded-2xl 
               bg-white 
@@ -49,8 +51,6 @@ const TestCards = () => {
               justify-between
               gap-6 
               p-6 
-              shadow-sm 
-              hover:shadow-lg 
               transition-shadow 
               duration-300
             "

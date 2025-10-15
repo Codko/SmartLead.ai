@@ -16,7 +16,7 @@ const GTM = () => {
       <div>
         <GTMcontent />
       </div>
-      <div className="mt-40">
+      <div className="mt-8">
         <GTMcards />
       </div>
       <div data-aos="fade-up" className="flex justify-center  lg:pt-20">

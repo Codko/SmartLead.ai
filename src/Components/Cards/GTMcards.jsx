@@ -47,14 +47,15 @@ const GTMcards = () => {
   ];
 
   return (
-    <div className="w-full flex justify-center px-4 py-10">
+    <div className="w-full flex justify-center px-4 py-10 m-auto">
       <div
         className="
           grid 
           grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
-          gap-10 sm:gap-12 lg:gap-20 
+          gap-10 sm:gap-12 lg:gap-16 xl:gap-24
+          justify-items-center
           place-items-center
-          w-full max-w-[1200px]
+          w-full lg:w-[85%] mx-auto
         "
       >
         {cards.map((card, index) => (
@@ -68,6 +69,7 @@ const GTMcards = () => {
               p-4 sm:p-6
               w-full sm:w-auto
               text-center sm:text-left
+              max-w-[360px] lg:max-w-[340px] xl:max-w-[390px]
             "
           >
             <img
@@ -80,12 +82,11 @@ const GTMcards = () => {
               "
             />
             <h1
-              style={{ fontFamily: "bold" }}
+              style={{ fontFamily: "medium" }}
               className="
                 text-[#AAAAAA]
-                text-lg sm:text-xl md:text-2xl
+                text-lg sm:text-xl xl:text-[22px]
                 leading-snug
-                w-full sm:w-[250px] md:w-[300px] lg:w-[340px]
                 transition-all transform duration-300 ease-in-out 
                 group-hover:-translate-x-1
               "

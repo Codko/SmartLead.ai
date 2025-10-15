@@ -16,7 +16,7 @@ const Bar = () => {
       className="
         w-full h-32 m-auto 
         flex flex-col items-center justify-center gap-3
-        lg:w-[80%] lg:h-36 lg:flex-row lg:items-center lg:justify-between lg:px-10 
+        lg:w-[88%] lg:h-36 lg:flex-row lg:items-center lg:justify-between lg:px-10 
         bg-[#6E58F1] rounded-2xl
       "
     >
