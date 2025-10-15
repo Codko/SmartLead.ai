@@ -53,8 +53,8 @@ const Navs = () => {
       leftMove = 395;
       rightMove = 435;
     } else if (screenWidth > 1850 && screenWidth <= 1880) {
-      leftMove = 390;
-      rightMove = 445;
+      leftMove = 405;
+      rightMove = 425;
     } else if (screenWidth > 1880 && screenWidth <= 1910) {
       leftMove = 405;
       rightMove = 455;
