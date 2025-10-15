@@ -18,7 +18,7 @@ const Navs = () => {
     const rightEl = navRightRef.current;
 
     const screenWidth = window.innerWidth;
-
+    console.log(screenWidth);
     let leftMove = 0;
     let rightMove = 0;
 
@@ -35,7 +35,7 @@ const Navs = () => {
       leftMove = 290;
       rightMove = 340;
     } else if (screenWidth > 1660 && screenWidth <= 1690) {
-      leftMove = 310;
+      leftMove = 315;
       rightMove = 360;
     } else if (screenWidth > 1690 && screenWidth <= 1720) {
       leftMove = 325;
@@ -53,14 +53,14 @@ const Navs = () => {
       leftMove = 395;
       rightMove = 435;
     } else if (screenWidth > 1850 && screenWidth <= 1880) {
-      leftMove = 395;
-      rightMove = 445;
+      leftMove = 400;
+      rightMove = 405;
     } else if (screenWidth > 1880 && screenWidth <= 1910) {
       leftMove = 405;
       rightMove = 455;
     } else if (screenWidth > 1910 && screenWidth <= 1940) {
       leftMove = 415;
-      rightMove = 465;
+      rightMove = 475;
     } else if (screenWidth > 1940 && screenWidth <= 1970) {
       leftMove = 425;
       rightMove = 475;
@@ -91,7 +91,7 @@ const Navs = () => {
     }).to(
       navRightRef.current,
       {
-        x: "-=520",
+        x: `-=${rightMove}`,
         scale: 0.95,
         borderTopLeftRadius: "0px",
         borderBottomLeftRadius: "0px",
@@ -145,7 +145,7 @@ const Navs = () => {
         <div className="hidden sm:block">
           <ul
             style={{ fontFamily: "regular" }}
-            className="flex items-center gap-6 text-[#848884] sm:text-sm md:text-sm lg:text-lg"
+            className="flex items-center gap-4 text-[#848884] sm:text-sm md:text-sm lg:text-lg"
           >
             <li className="transition-all duration-200 hover:text-[#6E58F1]">
               Product
@@ -174,7 +174,7 @@ const Navs = () => {
       >
         <h1
           style={{ fontFamily: "regular" }}
-          className="text-[#848884] text-sm lg:text-base transition-all duration-200 hover:text-[#6E58F1]"
+          className="text-[#848884]  sm:text-sm md:text-sm lg:text-lg transition-all duration-200 hover:text-[#6E58F1]"
         >
           Login
         </h1>

@@ -16,3 +16,9 @@
   font-family: "bold";
   src: url("/fonts/Poppins-Bold.ttf");
 }
+@media (min-width: 1850px) {
+  .wide-width {
+    width: 550px;
+    /* padding-right: 26px !important; */
+  }
+}
