@@ -145,7 +145,7 @@ const Navs = () => {
         <div className="hidden sm:block">
           <ul
             style={{ fontFamily: "regular" }}
-            className="flex items-center gap-6 text-[#848884] sm:text-sm md:text-sm lg:text-lg"
+            className="flex items-center gap-4 text-[#848884] sm:text-sm md:text-sm lg:text-lg"
           >
             <li className="transition-all duration-200 hover:text-[#6E58F1]">
               Product
