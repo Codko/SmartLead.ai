@@ -64,7 +64,7 @@ const AiAgentsCards = () => {
   lg:max-w-[1600px] 
   xl:max-w-[1750px] 
   2xl:max-w-[1920px]"
-    >
+>
       {cards.map((card, index) => (
         <div
           key={index}
